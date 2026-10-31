@@ -21,7 +21,7 @@ jobs:
         with:
           gradle-version: '8.9'
       - name: Extrair arquivos do app
-        run: unzip -o eco-android-build-v0.1.2.zip
+        run: unzip -o eco-android-build-v0.1.3.zip
       - name: Compilar APK
         run: gradle --no-daemon assembleDebug
       - name: Validar APK
@@ -35,9 +35,9 @@ jobs:
       - name: Publicar APK
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v0.1.2
-          name: Ecos do Subsolo — Ecos e Sinal de Retorno v0.1.2
-          body: "Nova história original com missões e o organismo Eco. Demo experimental."
+          tag_name: v0.1.3
+          name: Ecos do Subsolo — controles de celular v0.1.3
+          body: "Controles de celular revisados com setas grandes, responsivas e gesto de olhar separado. Demo experimental."
           files: app/build/outputs/apk/debug/app-debug.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
