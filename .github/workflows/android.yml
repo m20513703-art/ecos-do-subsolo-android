@@ -21,7 +21,7 @@ jobs:
         with:
           gradle-version: '8.9'
       - name: Extrair arquivos do app
-        run: unzip -o eco-android-build-v0.1.4.zip
+        run: unzip -o eco-android-build-v0.1.5.zip
       - name: Compilar APK
         run: gradle --no-daemon assembleDebug
       - name: Validar APK
@@ -35,9 +35,9 @@ jobs:
       - name: Publicar APK
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v0.1.4
-          name: Ecos do Subsolo — Noite Zero solo v0.1.4
-          body: "Campanha solo Noite Zero: pedido de resgate por rádio atrai a horda e inicia a corrida de extração. História original."
+          tag_name: v0.1.5
+          name: Ecos do Subsolo — terceira pessoa v0.1.5
+          body: "Terceira pessoa com Lia visível, câmera alternável para primeira pessoa, campanha solo Noite Zero. Demo experimental."
           files: app/build/outputs/apk/debug/app-debug.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
